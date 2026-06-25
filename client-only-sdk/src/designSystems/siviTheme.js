@@ -1,0 +1,51 @@
+const siviTheme = {
+  global: {
+    colors: {
+      focus: 'none',
+      brand: '#229EF9',
+      secondary1: '#9C4DFE',
+      secondary2: '#0DEAF5',
+      light: '#FFFFFF',
+      dark: '#000000',
+      critical: '#FE4D4D',
+      warning: '#F9CA22',
+      darkgreen: '#0EC2CB',
+      darkblue: '#1882D0',
+      limeblue: '#0DEAF54D',
+      positive: '#0EC2CB26',
+      lowcritical: '#FE4D4D4D',
+      negative: '#FE4D4D26',
+      regent_gray: '#8A78A0',
+      color1: { light: '#FFFFFF', dark: '#200C39' },
+      color2: { light: '#FBF8FF', dark: '#0C021A' },
+      color3: { light: '#F1E6FF', dark: '#320C64' },
+      color4: { light: '#C7ACEB', dark: '#9E68E2' },
+      color5: { light: '#705393', dark: '#AB84DE' },
+      color6: { light: '#270750', dark: '#FFFFFF' },
+      gradient1: 'linear-gradient(93deg, #229EF9 -2.01%, #9C4DFE 107.46%)',
+      gradient2: 'linear-gradient(93deg, #0EC2CB -2.01%, #229EF9 44.52%, #9C4DFE 107.46%)',
+      'mild-backdrop': 'linear-gradient(135deg, #FFF 6.87%, #F1E6FF 96.9%)',
+    },
+    breakpoints: { small: { value: 600 }, medium: { value: 800 }, ipad: { value: 900 } },
+    elevation: {
+      light: { small: '0px 0px 15px 0px rgba(0, 0, 0, 0.15)', medium: '0px 0px 30px 0px rgba(0, 0, 0, 0.30)' },
+    },
+    borderSize: { none: '0px', xs: '1px', small: '2px', medium: '4px', large: '8px', xl: '12px' },
+    edgeSize: {
+      'round-small': '3px', 'round-medium': '5px', 'round-large': '8px', 'round-xl': '12px', 'round-full': '100px',
+      hair: '1px', 'space-0': '0px', 'space-25': '2px', 'space-50': '4px', 'space-75': '6px',
+      'space-100': '8px', 'space-120': '10px', 'space-150': '12px', 'space-200': '16px',
+      'space-250': '20px', 'space-300': '24px', 'space-400': '30px', 'space-500': '40px',
+      'space-600': '50px', 'space-750': '60px', 'space-1000': '80px', 'space-1250': '100px',
+    },
+    size: {
+      xs: '160px', small: '240px', medium: '320px', large: '360px', xl: '420px',
+      '2xl': '480px', '3xl': '600px', '4xl': '756px', '5xl': '920px',
+      full: '100%', half: '50%', hair: '1px',
+    },
+  },
+  text: { font: { family: 'Inter' } },
+  button: { default: {} },
+}
+
+export default siviTheme

@@ -227,3 +227,93 @@ body {
     font-size: 14px;
   }
 }
+
+/* Design System Selector */
+.design-system-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.ds-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ds-dropdown {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+.ds-dropdown:focus {
+  border-color: #667eea;
+}
+
+.ds-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.ds-editor-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ds-format-btn {
+  padding: 4px 12px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ds-format-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ds-json-editor {
+  width: 100%;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  resize: vertical;
+  outline: none;
+  min-height: 200px;
+}
+
+.ds-json-editor:focus {
+  border-color: #667eea;
+}
+
+.ds-json-error {
+  border-color: #ff6b6b;
+}
+
+.ds-error-msg {
+  font-size: 11px;
+  color: #ff6b6b;
+  padding: 4px 0;
+}

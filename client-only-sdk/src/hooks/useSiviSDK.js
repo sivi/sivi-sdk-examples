@@ -24,6 +24,7 @@ const useSiviSDK = () => {
   const paramsRef = React.useRef(null)
   const [isAIStudioOpen, setIsAIStudioOpen] = React.useState(false)
   const eventHandlersRef = React.useRef(new Set())
+  const [designSystem, setDesignSystem] = React.useState(null)
 
   const handleVisualClick = React.useCallback((params) => {
     paramsRef.current = params
@@ -66,9 +67,12 @@ const useSiviSDK = () => {
   React.useEffect(() => {
     if (isAIStudioOpen) {
       const options = Object.assign({}, defaultOptions, paramsRef.current)
+      if (designSystem) {
+        options.designSystem = designSystem
+      }
       window.SIVI?.show(options, IFRAME_CONTAINER_ID)
     }
-  }, [isAIStudioOpen])
+  }, [isAIStudioOpen, designSystem])
 
   //////////////// Handle SIVI SDK events ////////////////////////
   React.useEffect(() => {
@@ -103,7 +107,9 @@ const useSiviSDK = () => {
     hideAIStudio,
     registerEventHandler,
     unregisterEventHandler,
-    IFRAME_CONTAINER_ID
+    IFRAME_CONTAINER_ID,
+    designSystem,
+    setDesignSystem
   }
 }
 
