@@ -20,6 +20,7 @@ const amazonTheme = {
       color1: { light: '#FFFFFF', dark: '#131A22' }, color2: { light: '#F7F7F7', dark: '#0F1419' },
       color3: { light: '#EAEDED', dark: '#232F3E' }, color4: { light: '#CCCEDB', dark: '#3B4A5B' },
       color5: { light: '#565959', dark: '#8D959F' }, color6: { light: '#FF9900', dark: '#FFFFFF' },
+      color3Alpha: 'rgba(234, 237, 237, 0.24)',
       gradient1: 'linear-gradient(93deg, #FF9900 -2.01%, #146EB4 107.46%)',
       gradient2: 'linear-gradient(93deg, #067D62 -2.01%, #FF9900 44.52%, #146EB4 107.46%)',
       'mild-backdrop': 'linear-gradient(135deg, #FFFFFF 6.87%, #FFF3E5 96.9%)',

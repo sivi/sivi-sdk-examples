@@ -20,6 +20,7 @@ const netflixTheme = {
       color1: { light: '#FFFFFF', dark: '#141414' }, color2: { light: '#F5F5F1', dark: '#0A0A0A' },
       color3: { light: '#E6E6E0', dark: '#1F1F1F' }, color4: { light: '#BFBFB8', dark: '#404040' },
       color5: { light: '#808080', dark: '#A0A0A0' }, color6: { light: '#E50914', dark: '#FFFFFF' },
+      color3Alpha: 'rgba(230, 230, 224, 0.24)',
       gradient1: 'linear-gradient(93deg, #E50914 -2.01%, #221F1F 107.46%)',
       gradient2: 'linear-gradient(93deg, #46D369 -2.01%, #E50914 44.52%, #221F1F 107.46%)',
       'mild-backdrop': 'linear-gradient(135deg, #221F1F 6.87%, #221F1F 96.9%)',

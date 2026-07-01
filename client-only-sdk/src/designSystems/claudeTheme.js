@@ -20,6 +20,7 @@ const claudeTheme = {
       color1: { light: '#FFFFFF', dark: '#1A1815' }, color2: { light: '#FAF9F7', dark: '#13110E' },
       color3: { light: '#F0EDE8', dark: '#252220' }, color4: { light: '#D4CFC7', dark: '#4A453E' },
       color5: { light: '#8B8275', dark: '#A89F92' }, color6: { light: '#D97757', dark: '#FFFFFF' },
+      color3Alpha: 'rgba(240, 237, 232, 0.24)',
       gradient1: 'linear-gradient(93deg, #D97757 -2.01%, #C96442 107.46%)',
       gradient2: 'linear-gradient(93deg, #5A8A5A -2.01%, #D97757 44.52%, #C96442 107.46%)',
       'mild-backdrop': 'linear-gradient(135deg, #FAF9F7 6.87%, #F0EBE4 96.9%)',

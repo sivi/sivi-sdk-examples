@@ -20,6 +20,7 @@ const appleTheme = {
       color1: { light: '#FFFFFF', dark: '#1d1d1f' }, color2: { light: '#F5F5F7', dark: '#2C2C2E' },
       color3: { light: '#E8E8ED', dark: '#3A3A3C' }, color4: { light: '#D2D2D7', dark: '#6E6E73' },
       color5: { light: '#86868B', dark: '#AEAEB2' }, color6: { light: '#1d1d1f', dark: '#F5F5F7' },
+      color3Alpha: 'rgba(232, 232, 237, 0.24)',
       gradient1: 'linear-gradient(135deg, #1d1d1f 0%, #3A3A3C 100%)',
       gradient2: 'linear-gradient(135deg, #6e6e73 0%, #1d1d1f 100%)',
       'mild-backdrop': 'linear-gradient(135deg, #FFFFFF 0%, #F5F5F7 100%)',

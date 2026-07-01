@@ -20,6 +20,7 @@ const spotifyTheme = {
       color1: { light: '#FFFFFF', dark: '#121212' }, color2: { light: '#F6F6F6', dark: '#0A0A0A' },
       color3: { light: '#E8E8E8', dark: '#1E1E1E' }, color4: { light: '#B3B3B3', dark: '#404040' },
       color5: { light: '#A7A7A7', dark: '#8D8D8D' }, color6: { light: '#1DB954', dark: '#FFFFFF' },
+      color3Alpha: 'rgba(232, 232, 232, 0.24)',
       gradient1: 'linear-gradient(93deg, #1DB954 -2.01%, #191414 107.46%)',
       gradient2: 'linear-gradient(93deg, #0D72EA -2.01%, #1DB954 44.52%, #191414 107.46%)',
       'mild-backdrop': 'linear-gradient(135deg, #FFFFFF 6.87%, #E8F8E8 96.9%)',

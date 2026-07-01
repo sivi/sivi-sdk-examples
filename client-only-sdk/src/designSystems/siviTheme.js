@@ -22,6 +22,7 @@ const siviTheme = {
       color4: { light: '#C7ACEB', dark: '#9E68E2' },
       color5: { light: '#705393', dark: '#AB84DE' },
       color6: { light: '#270750', dark: '#FFFFFF' },
+      color3Alpha: 'rgba(241, 230, 255, 0.24)',
       gradient1: 'linear-gradient(93deg, #229EF9 -2.01%, #9C4DFE 107.46%)',
       gradient2: 'linear-gradient(93deg, #0EC2CB -2.01%, #229EF9 44.52%, #9C4DFE 107.46%)',
       'mild-backdrop': 'linear-gradient(135deg, #FFF 6.87%, #F1E6FF 96.9%)',
