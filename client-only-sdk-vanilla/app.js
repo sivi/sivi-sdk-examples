@@ -72,15 +72,20 @@ function populateDesignSystemSelector() {
     el.textContent = option.label;
     designSystemSelect.appendChild(el);
   });
-  designSystemSelect.value = 'sivi';
-  updateDesignSystem('sivi');
+  designSystemSelect.value = 'resetToDefault';
+  updateDesignSystem('resetToDefault');
 }
 
 function updateDesignSystem(id) {
   const option = window.designSystemOptions?.find((opt) => opt.id === id);
   if (!option) return;
-  currentDesignSystem = option.theme;
-  dsJsonEditor.value = JSON.stringify(currentDesignSystem, null, 2);
+  if (option.resetToDefault) {
+    currentDesignSystem = { resetToDefault: true };
+    dsJsonEditor.value = '';
+  } else {
+    currentDesignSystem = option.theme;
+    dsJsonEditor.value = JSON.stringify(currentDesignSystem, null, 2);
+  }
   dsJsonEditor.classList.remove('ds-json-error');
   dsErrorMsg.textContent = '';
   applyDesignSystemToSDK();
@@ -88,7 +93,10 @@ function updateDesignSystem(id) {
 
 function applyDesignSystemToSDK() {
   if (!isAIStudioOpen || !currentDesignSystem) return;
-  const options = Object.assign({}, defaultOptions, paramsRef || {}, { designSystem: currentDesignSystem });
+  const options = Object.assign({}, defaultOptions, paramsRef || {});
+  if (!currentDesignSystem.resetToDefault) {
+    options.designSystem = currentDesignSystem;
+  }
   window.SIVI?.setOptions(options);
 }
 
@@ -235,7 +243,10 @@ function handleShapeClick(element) {
   if (!isAIStudioOpen) {
     showAIStudio();
   } else {
-    const options = Object.assign({}, defaultOptions, paramsRef, { designSystem: currentDesignSystem });
+    const options = Object.assign({}, defaultOptions, paramsRef);
+    if (currentDesignSystem && !currentDesignSystem.resetToDefault) {
+      options.designSystem = currentDesignSystem;
+    }
     window.SIVI?.setOptions(options);
   }
 }
@@ -245,7 +256,10 @@ function showAIStudio() {
   controlPanel.style.display = 'none';
   visualPanel.style.display = 'flex';
 
-  const options = Object.assign({}, defaultOptions, paramsRef, { designSystem: currentDesignSystem });
+  const options = Object.assign({}, defaultOptions, paramsRef);
+  if (currentDesignSystem && !currentDesignSystem.resetToDefault) {
+    options.designSystem = currentDesignSystem;
+  }
   window.SIVI?.show(options, IFRAME_CONTAINER_ID);
 }
 

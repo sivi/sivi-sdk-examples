@@ -1,4 +1,5 @@
 import React from 'react'
+import useSessionStorage from './useSessionStorage'
 
 const IFRAME_CONTAINER_ID = 'sivi-container'
 
@@ -24,7 +25,11 @@ const useSiviSDK = () => {
   const paramsRef = React.useRef(null)
   const [isAIStudioOpen, setIsAIStudioOpen] = React.useState(false)
   const eventHandlersRef = React.useRef(new Set())
-  const [designSystem, setDesignSystem] = React.useState(null)
+  const [designSystem, setDesignSystem] = useSessionStorage('siviDesignSystem', null)
+  const setDesignSystemWrapper = React.useCallback((ds) => {
+    console.log('[useSiviSDK] setDesignSystem called with:', JSON.stringify(ds))
+    setDesignSystem(ds)
+  }, [setDesignSystem])
 
   const handleVisualClick = React.useCallback((params) => {
     paramsRef.current = params
@@ -70,7 +75,10 @@ const useSiviSDK = () => {
       if (designSystem) {
         options.designSystem = designSystem
       }
+      console.log('[useSiviSDK] useEffect triggered, isAIStudioOpen:', isAIStudioOpen, 'designSystem state:', JSON.stringify(designSystem), 'options.designSystem:', JSON.stringify(options.designSystem))
       window.SIVI?.show(options, IFRAME_CONTAINER_ID)
+    } else {
+      console.log('[useSiviSDK] useEffect triggered, isAIStudioOpen:', isAIStudioOpen, 'skipping SIVI.show')
     }
   }, [isAIStudioOpen, designSystem])
 
@@ -109,7 +117,7 @@ const useSiviSDK = () => {
     unregisterEventHandler,
     IFRAME_CONTAINER_ID,
     designSystem,
-    setDesignSystem
+    setDesignSystem: setDesignSystemWrapper
   }
 }
 

@@ -23,7 +23,7 @@ const netflixTheme = {
       color3Alpha: 'rgba(230, 230, 224, 0.24)',
       gradient1: 'linear-gradient(93deg, #E50914 -2.01%, #221F1F 107.46%)',
       gradient2: 'linear-gradient(93deg, #46D369 -2.01%, #E50914 44.52%, #221F1F 107.46%)',
-      'mild-backdrop': 'linear-gradient(135deg, #221F1F 6.87%, #221F1F 96.9%)',
+      'mild-backdrop': 'linear-gradient(135deg, #FFFFFF 6.87%, #FFF5F5 96.9%)',
     },
     breakpoints: { small: { value: 600 }, medium: { value: 768 }, ipad: { value: 1024 } },
     elevation: { light: '0px 2px 8px 0px rgba(0,0,0,0.20)', heavy: '0px 8px 24px 0px rgba(0,0,0,0.40)' },

@@ -47,26 +47,6 @@ const makeTheme = (colors, fonts, breakpoints, radii, spacing) => ({
   anchor: { extend: () => 'font-weight: 400;' },
 });
 
-const siviTheme = makeTheme(
-  {
-    focus: 'none', brand: '#229EF9', secondary1: '#9C4DFE', secondary2: '#0DEAF5',
-    light: '#FFFFFF', dark: '#000000', critical: '#FE4D4D', warning: '#F9CA22',
-    darkgreen: '#0EC2CB', darkblue: '#1882D0', limeblue: '#0DEAF54D',
-    positive: '#0EC2CB26', lowcritical: '#FE4D4D4D', negative: '#FE4D4D26',
-    regent_gray: '#8A78A0',
-    color1: { light: '#FFFFFF', dark: '#200C39' }, color2: { light: '#FBF8FF', dark: '#0C021A' },
-    color3: { light: '#F1E6FF', dark: '#320C64' }, color4: { light: '#C7ACEB', dark: '#9E68E2' },
-    color5: { light: '#705393', dark: '#AB84DE' }, color6: { light: '#270750', dark: '#FFFFFF' },
-    gradient1: 'linear-gradient(93deg, #229EF9 -2.01%, #9C4DFE 107.46%)',
-    gradient2: 'linear-gradient(93deg, #0EC2CB -2.01%, #229EF9 44.52%, #9C4DFE 107.46%)',
-    'mild-backdrop': 'linear-gradient(135deg, #FFF 6.87%, #F1E6FF 96.9%)',
-  },
-  { text: 'Inter', heading: 'Inter' },
-  { small: { value: 600 }, medium: { value: 800 }, ipad: { value: 900 } },
-  { small: '3px', medium: '5px', large: '8px' },
-  '24px'
-);
-
 const appleTheme = makeTheme(
   {
     focus: 'none', brand: '#0071e3', secondary1: '#1d1d1f', secondary2: '#6e6e73',
@@ -169,12 +149,10 @@ const claudeTheme = makeTheme(
 );
 
 window.designSystemOptions = [
-  { id: 'sivi', label: 'Sivi (Default)', theme: siviTheme },
+  { id: 'resetToDefault', label: 'Sivi (Default)', resetToDefault: true },
   { id: 'apple', label: 'Apple', theme: appleTheme },
   { id: 'amazon', label: 'Amazon', theme: amazonTheme },
   { id: 'netflix', label: 'Netflix', theme: netflixTheme },
   { id: 'spotify', label: 'Spotify', theme: spotifyTheme },
   { id: 'claude', label: 'Claude', theme: claudeTheme },
 ];
-
-window.getDefaultDesignSystem = () => siviTheme;
