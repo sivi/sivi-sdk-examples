@@ -1,6 +1,7 @@
 import './App.css'
 import React from 'react'
 import { LayoutSelector, LayoutPreview } from './components/Layout'
+import DesignSystemSelector from './components/DesignSystemSelector'
 import useSiviSDK from './hooks/useSiviSDK'
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     showAIStudio,
     openDesignVariantEditor,
     registerEventHandler,
-    IFRAME_CONTAINER_ID
+    IFRAME_CONTAINER_ID,
+    setDesignSystem
   } = useSiviSDK()
 
   return (
@@ -36,6 +38,7 @@ function App() {
           ) : (
             <div className="control-panel">
               <div className="control-content">
+                <DesignSystemSelector onDesignSystemChange={setDesignSystem} />
                 <LayoutSelector 
                   currentLayout={currentLayout}
                   onLayoutChange={setCurrentLayout}

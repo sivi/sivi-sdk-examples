@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Editor</title>
+  <link rel="icon" type="image/png" href="./ai_logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Web Editor</h1>
+    </header>
+
+    <div class="app-content">
+      <aside class="sidebar">
+        <div id="control-panel" class="control-panel">
+          <div class="control-content">
+            <div class="design-system-selector">
+              <label class="ds-label">Design System</label>
+              <select id="designSystemSelect" class="ds-dropdown"></select>
+              <div class="ds-editor-header">
+                <span class="ds-editor-title">Theme JSON Editor</span>
+                <button id="ds-format-btn" class="ds-format-btn">Format</button>
+              </div>
+              <textarea id="ds-json-editor" class="ds-json-editor" spellcheck="false" rows="12"></textarea>
+              <div id="ds-error-msg" class="ds-error-msg"></div>
+            </div>
+
+            <div class="layout-selector">
+              <label for="layoutSelect" class="layout-label">Choose Layout</label>
+              <select id="layoutSelect" class="layout-select"></select>
+            </div>
+          </div>
+          <button id="ai-studio-button" class="ai-studio-button">AI Design Studio</button>
+        </div>
+
+        <div id="visual-panel" class="visual-panel" style="display: none;">
+          <div id="sivi-container" class="iframe-container"></div>
+          <button id="back-button" class="back-button">Back to Home</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div id="layout-preview" class="layout-preview"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="./layouts.json" type="application/json" id="layouts-data"></script>
+  <!-- <script src="http://localhost:4848/script.js?namespace=SIVI&accountEmail=%SIVI_ACCOUNT_EMAIL%"></script> -->
+  <script src="https://sdk-staging.sivicloud.com/script.js?namespace=SIVI&accountEmail=%SIVI_ACCOUNT_EMAIL%"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="./designSystems.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

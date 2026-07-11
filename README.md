@@ -26,11 +26,15 @@ Get Superuser Features. White-labeling, UI customisation, custom SDK deployment 
 - [Sivi API](https://developer.sivi.ai/docs/sivi-api/overview)
 
 ## Examples
-- [Sivi SDK Example](./)
-- [Client Only SDK Example](./client-only-sdk)
-- [Server Only API Example](./server-only-api)
-- [Client SDK with User Management Example](./client-sdk-with-user-mgmt)
-- [Client SDK with User Management Vanilla Example](./client-sdk-with-user-mgmt-vanilla)
-- [Server Only API Polling Example](./server-only-api-polling)
-- [Server Only API Python Example](./server-only-api-python)
-- [Server Only API PHP Example](./server-only-api-php)
+
+### SDK Examples
+- [Client Only SDK (React)](./client-only-sdk) - React + Vite app with layout-based design generation using the Sivi SDK
+- [Client Only SDK (Vanilla JS)](./client-only-sdk-vanilla) - Plain HTML/JS version of the SDK example
+- [Client SDK with User Management (React)](./client-sdk-with-user-mgmt) - SDK example with user management backend (login, delete, credit limits)
+- [Client SDK with User Management (Vanilla JS)](./client-sdk-with-user-mgmt-vanilla) - Plain HTML/JS version with user management backend
+
+### API Examples
+- [Server Only API (Node.js)](./server-only-api) - Express proxy for Sivi Core API endpoints
+- [Server Only API (Node.js + Polling)](./server-only-api-polling) - Same as above with built-in async job polling
+- [Server Only API (Python)](./server-only-api-python) - Flask proxy for Sivi Core API endpoints
+- [Server Only API (PHP)](./server-only-api-php) - PHP proxy for Sivi Core API endpoints
